@@ -1,0 +1,17 @@
+{
+    "name": "dhanuja-portfolio",
+    "version": "1.0.0",
+    "description": "A personal portfolio website built with React and Framer Motion.",
+    "scripts": {
+      "start": "npx serve .",
+      "deploy": "echo 'Deploy script not needed for static Vercel deployment.'"
+    },
+    "keywords": [
+      "react",
+      "portfolio",
+      "tailwindcss",
+      "framer-motion"
+    ],
+    "author": "Dhanuja Surasingha",
+    "license": "ISC"
+}
