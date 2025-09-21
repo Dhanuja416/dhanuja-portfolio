@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dhanuja Surasingha - Portfolio</title>
+  <!-- Tailwind CSS from CDN for styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Inter Font from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- React and ReactDOM scripts from CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+  <!-- Framer Motion script from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/framer-motion@6.5.1/dist/framer-motion.js"></script>
+  <!-- Babel for compiling JSX -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <style>
+    /* Custom CSS for light/dark mode and animations */
+    body { font-family: 'Inter', sans-serif; transition: background-color 0.3s, color 0.3s; }
+    .dark body { @apply bg-gray-950 text-white; }
+    .star {
+        position: absolute;
+        background: #fff;
+        border-radius: 50%;
+        animation: fall linear infinite;
+    }
+    @keyframes fall {
+        0% { transform: translateY(-10vh) scale(0.5); opacity: 0; }
+        50% { opacity: 1; }
+        100% { transform: translateY(110vh) scale(1); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <!-- Our portfolio component is loaded here. Babel will compile it -->
+  <script type="text/babel" src="portfolio.jsx"></script>
+  <script type="text/babel">
+    const container = document.getElementById('root');
+    const root = ReactDOM.createRoot(container);
+    root.render(React.createElement(App));
+  </script>
+</body>
+</html>
